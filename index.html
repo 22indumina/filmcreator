@@ -1,91 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StreamFlix - Watch Movies & TV Shows</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelFlix - Movie Player</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="website-wrapper">
+        <main class="main-content">
+            <section class="movie-player-section">
+                <div class="video-player-container">
+                    <iframe class="video-player" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">StreamFlix</div>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Movies</li>
-        <li>TV Shows</li>
-        <li>New & Popular</li>
-        <li>My List</li>
-      </ul>
-    </nav>
-    <input type="text" placeholder="Search..." class="search-bar">
-  </header>
+            <section class="movie-details-section">
+                <h1 class="movie-title">Echoes of the Cosmos</h1>
+                <div class="movie-meta">
+                    <span class="release-year">2025</span>
+                    <span class="genre">Science Fiction</span>
+                </div>
+                <p class="movie-description">
+                    A lone astronaut on a deep space mission discovers a mysterious signal that could hold the key to humanity's future, but decoding it might unleash a threat beyond her comprehension.
+                </p>
+            </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>The Adventure Begins</h1>
-      <p>An epic story of adventure and friendship. Watch now!</p>
-      <button>Watch Now</button>
-      <button>Add to My List</button>
+            <section class="comments-section">
+                <h2 class="section-title">Comments</h2>
+                <div class="comment">
+                    <p class="comment-author">CinemaFan22</p>
+                    <p class="comment-text">An absolute masterpiece of modern sci-fi! The visuals were breathtaking.</p>
+                </div>
+                <div class="comment">
+                    <p class="comment-author">GalacticGazer</p>
+                    <p class="comment-text">The plot had me on the edge of my seat. A must-watch for any fan of the genre.</p>
+                </div>
+                <div class="comment">
+                    <p class="comment-author">AverageJoe</p>
+                    <p class="comment-text">It was a pretty good movie. The popcorn was also decent.</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h2 class="section-title">Related Movies</h2>
+            <ul class="related-movies-list">
+                <li class="related-movie-item">
+                    <img src="https://via.placeholder.com/80x120" alt="Thumbnail for Starlight Voyager" class="related-movie-thumbnail">
+                    <p class="related-movie-title">Starlight Voyager</p>
+                </li>
+                <li class="related-movie-item">
+                    <img src="https://via.placeholder.com/80x120" alt="Thumbnail for Martian Odyssey" class="related-movie-thumbnail">
+                    <p class="related-movie-title">Martian Odyssey</p>
+                </li>
+                <li class="related-movie-item">
+                    <img src="https://via.placeholder.com/80x120" alt="Thumbnail for The Andromeda Strain" class="related-movie-thumbnail">
+                    <p class="related-movie-title">The Andromeda Strain</p>
+                </li>
+            </ul>
+        </aside>
     </div>
-  </section>
-
-  <!-- Category Sections -->
-  <section class="category">
-    <h2>Trending Now</h2>
-    <div class="movie-slider">
-      <div class="movie-thumb" onclick="openModal('Movie 1')"><img src="images/movie1.jpg" alt="Movie 1"></div>
-      <div class="movie-thumb" onclick="openModal('Movie 2')"><img src="images/movie2.jpg" alt="Movie 2"></div>
-      <div class="movie-thumb" onclick="openModal('Movie 3')"><img src="images/movie3.jpg" alt="Movie 3"></div>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Top Picks for You</h2>
-    <div class="movie-slider">
-      <div class="movie-thumb" onclick="openModal('Movie 4')"><img src="images/movie4.jpg" alt="Movie 4"></div>
-      <div class="movie-thumb" onclick="openModal('Movie 5')"><img src="images/movie5.jpg" alt="Movie 5"></div>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>New Releases</h2>
-    <div class="movie-slider">
-      <div class="movie-thumb" onclick="openModal('Movie 6')"><img src="images/movie6.jpg" alt="Movie 6"></div>
-      <div class="movie-thumb" onclick="openModal('Movie 7')"><img src="images/movie7.jpg" alt="Movie 7"></div>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Popular TV Shows</h2>
-    <div class="movie-slider">
-      <div class="movie-thumb" onclick="openModal('TV Show 1')"><img src="images/tv1.jpg" alt="TV Show 1"></div>
-      <div class="movie-thumb" onclick="openModal('TV Show 2')"><img src="images/tv2.jpg" alt="TV Show 2"></div>
-    </div>
-  </section>
-
-  <!-- Movie Details Modal -->
-  <div id="movieModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle">Movie Title</h2>
-      <p id="modalDescription">Description of the selected movie or TV show.</p>
-      <button>Play</button>
-      <button>Add to My List</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 StreamFlix | <a href="#">About</a> | <a href="#">Help Center</a> | <a href="#">Privacy</a> | <a href="#">Contact</a></p>
-    <div class="social-links">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
