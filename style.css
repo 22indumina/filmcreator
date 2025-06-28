@@ -1,0 +1,28 @@
+.login-modal input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 6px;
+  border: none;
+}
+
+.login-modal button {
+  padding: 10px 20px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-modal p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-modal span {
+  color: #e50914;
+  cursor: pointer;
+  text-decoration: underline;
+}
